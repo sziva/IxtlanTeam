@@ -7,11 +7,9 @@ function preberiDatoteko(callback){
     .then(data => {        
         const arrayFile = data.split("\n");
         const prazniki = Object.values(arrayFile);
-        console.log(prazniki);
         callback(prazniki);
     });
 }
-
 
 const ustvariKoledar = () =>{
     preberiDatoteko(prazniki =>{
@@ -58,7 +56,6 @@ const ustvariKoledar = () =>{
         for(let i = 1; i <= zadnjiDan; i++){
             const jePraznik = aliJePraznik(i, datum.getMonth(), prazniki);
             flagDan++;
-            console.log(jePraznik, i, datum.getMonth());
             if(i === new Date().getDate() && datum.getMonth() === new Date().getMonth() && datum.getFullYear() === new Date().getFullYear() ){
                 if(flagDan%7 === 0){
                     if(jePraznik === 1 && datum.getFullYear() === new Date().getFullYear()){
@@ -165,7 +162,6 @@ function skociNaMesecLeto(){
  */
 function aliJePraznik(d, m, prazniki){
     let jePraznik = 0;
-    console.log(typeof(prazniki));
     for(i = 0; i < prazniki.length; i++){
         const praznik = Object.values(prazniki[i].split(" "));
         praznikDan = parseInt(praznik[0].split(".")[0]);
