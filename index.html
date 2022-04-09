@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koledar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">    
+</head>
+<body>
+    <div class="container">
+        <div class="koledar">
+            <div class="mesec"> 
+                <i class="fa fa-angle-left prejsniMesec"></i>
+                <div class="datum">
+                    <h1></h1>
+                    <p></p>
+                </div>
+                <i class="fa fa-angle-right naslednjiMesec"></i>
+            </div>
+            <div class="skoci_na">
+                <div class="izberi_mesec">Mesec:  
+                    <select name= "izbira" id="izberiMesec" onchange = "skociNaMesec()">
+                        <option value="Januar">Januar</option>
+                        <option value="Februar">Februar</option>
+                        <option value="Marec">Marec</option>
+                        <option value="April">April</option>
+                        <option value="Maj">Maj</option>
+                        <option value="Junij">Junij</option>
+                        <option value="Julij">Julij</option>
+                        <option value="Avgust">Avgust</option>
+                        <option value="September">September</option>
+                        <option value="Oktober">Oktober</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+                </div>
+                <div class="izberi_leto">Leto:
+                    <form onchange="skociNaLeto()" name="zLeto" onsubmit="return false">
+                        <input type="text submit" id="izbranoLeto" name="izbrano_leto"><br>
+                        <input type="submit" value="OK">                   
+                    </form>
+                </div>
+                <div class="izberi_leto_mesec">Datum:
+                    <form onchange="skociNaMesecLeto()" name="zLM" onsubmit="return false">
+                        <input type="text submit" id="izbranoLM" name="izbrano_LM" placeholder="dd.mm.llll"><br>
+                        <input type="submit" value="OK"> 
+                    </form>
+                </div>
+            </div>
+            <div class="dnevi">
+                <div>Pon</div>
+                <div>Tor</div>
+                <div>Sre</div>
+                <div>Čet</div>
+                <div>Pet</div>
+                <div>Sob</div>
+                <div class="nedelja">Ned</div>
+            </div>
+            <div class="datumi"></div>
+        </div>
+    </div>
+    <script src="koledar.js"></script>
+</body>
+</html>

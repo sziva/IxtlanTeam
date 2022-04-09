@@ -1,0 +1,207 @@
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: aliceblue;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.koledar{
+    width: 45rem;
+    height: 54rem;
+    background-color: azure;
+}
+
+.mesec{
+    width: 100%;
+    height: 12rem;
+    background-color: azure;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.mesec i{
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.mesec h1{
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+.mesec p{
+    font-size: 1.6rem;
+}
+
+.dnevi{
+    width: 100%;
+    height: 5rem;
+    padding: 0 0.4rem;
+    display: flex;
+    align-items: center;
+}
+
+.dnevi div{
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    width: calc(44.2rem/7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.datumi{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.2rem;
+}
+
+.datumi div{
+    font-size: 1.4rem;
+    margin: 0.3rem;
+    width: calc(40.2rem/7);
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.datumi div:hover{
+    border: 0.2rem solid #777;
+    cursor: pointer;
+}
+
+.skoci_na{
+    height: 3.5rem;
+    font-size: 1.5rem;
+    width: 100%;
+    padding:0 0.4rem;
+    display: flex;
+    align-items: left;
+}
+
+.izberi_mesec{
+    height: 3.5rem;
+    font-size: 1.5rem;
+    width: wrap;
+    padding-left:4rem;
+    padding-right: 0.4rem;
+    display: flex;
+    align-items: center;
+}
+
+.izberi_mesec select{
+    height: 2rem;
+    font-size: 1.4rem;
+    width: wrap;
+    padding: 0.3 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.izberi_mesec option{
+    height: 1.9rem;
+    font-size: 1.5rem;
+    width: wrap;
+    display: flex;
+    align-items: center;
+}
+
+.izberi_leto{
+    height: 3.5rem;
+    font-size: 1.5rem;
+    width: 10.3rem;
+    padding: 0 0.3rem;
+    display: flex;
+    align-items: center;
+}
+
+.izberi_leto form{
+    height: 2rem;
+    font-size: 1.5rem;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+.izberi_leto input{
+    height: 2rem;
+    font-size: 1.3rem;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+.izberi_leto_mesec{
+    height: 3.5rem;
+    font-size: 1.5rem;
+    width: wrap;
+    padding: 0 0.3rem;
+    display: flex;
+    align-items: center;
+}
+
+.izberi_leto_mesec form{
+    height: 2rem;
+    font-size: 1.5rem;
+    width: 7rem;
+    padding: 0 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.izberi_leto_mesec input{
+    height: 2rem;
+    font-size: 1.3rem;
+    padding: 0 0.2rem;
+    width: 7rem;
+    display: flex;
+    align-items: center;
+}
+
+.prejsni_dan{
+    opacity: 0.5;
+}
+
+.naslednji_dan{
+    opacity: 0.5;
+}
+
+.danasnji_dan{
+    border-radius: 50%;
+    border: 0.1rem solid black;
+    text-align: center;
+}
+
+.nedelja{
+    color: #233b93;
+}
+
+.praznik{
+    text-shadow: #777;
+    font-weight: bolder;
+    color: red;
+}
+
+
